@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Main should render properly 1`] = `
+<main
+  class="styles__Wrapper-sc-149c3co-0 eSjiaW"
+>
+  <h1>
+    main component
+  </h1>
+</main>
+`;

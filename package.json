@@ -1,15 +1,71 @@
 {
-  "name": "my-trips",
+  "name": "my-nextjs-boilerplate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "commit": "cz",
+    "lint": "yarn lint:js && yarn lint:css",
+    "lint:css": "stylelint \"src/**/styles.ts\" --max-warnings 0",
+    "lint:js": "eslint src --max-warnings=0",
+    "start": "next start",
+    "prepare": "husky install",
+    "test": "jest",
+    "test:watch": "yarn test --watch"
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint:js --fix",
+      "yarn lint:css",
+      "yarn test --findRelatedTests --bail"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "dependencies": {
     "next": "10.0.8",
+    "next-pwa": "^5.0.6",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "styled-components": "^5.2.1",
+    "webpack": "4"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.13.0",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/prompt": "^11.0.0",
+    "@commitlint/prompt-cli": "^11.0.0",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.33",
+    "@types/react": "^17.0.3",
+    "@types/styled-components": "^5.1.8",
+    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/parser": "^4.17.0",
+    "babel-plugin-styled-components": "^1.12.0",
+    "commitizen": "^4.2.3",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "husky": "^5.1.3",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.4",
+    "prettier": "2.2.1",
+    "stylelint": "^13.12.0",
+    "stylelint-config-hudochenkov": "^5.0.0",
+    "stylelint-config-recommended": "^4.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-order": "^4.1.0",
+    "stylelint-processor-styled-components": "^1.10.0",
+    "typescript": "^4.2.3"
   }
 }

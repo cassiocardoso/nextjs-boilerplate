@@ -1,0 +1,8 @@
+{
+  "processors": ["stylelint-processor-styled-components"],
+  "plugins": ["stylelint-order"],
+  "extends": ["stylelint-config-recommended", "stylelint-config-styled-components", "stylelint-config-hudochenkov/order"],
+  "rules": {
+    "indentation": 2
+  }
+}

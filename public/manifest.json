@@ -1,0 +1,27 @@
+{
+  "name": "Boilerplate",
+  "short_name": "Boilerplate",
+  "background_color": "#000",
+  "description": "My custom Next.js boilerplate",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#fff",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/images/maskable-icon.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}
