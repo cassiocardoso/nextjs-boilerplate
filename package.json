@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "commit": "cz",
+    "format": "prettier --write src/*",
     "lint": "yarn lint:js && yarn lint:css",
     "lint:css": "stylelint \"src/**/styles.ts\" --max-warnings 0",
     "lint:js": "eslint src --max-warnings=0",
@@ -16,6 +17,7 @@
   },
   "lint-staged": {
     "src/**/*": [
+      "yarn format",
       "yarn lint:js --fix",
       "yarn lint:css",
       "yarn test --findRelatedTests --bail"
@@ -52,9 +54,9 @@
     "commitizen": "^4.2.3",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.21.0",
-    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-prettier": "^8.2.0",
     "eslint-plugin-jest": "^24.2.1",
-    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "^5.1.3",
@@ -62,12 +64,14 @@
     "jest-styled-components": "^7.0.3",
     "jest-watch-typeahead": "^0.6.1",
     "lint-staged": "^10.5.4",
-    "prettier": "2.2.1",
+    "prettier": "^2.2.1",
     "stylelint": "^13.12.0",
     "stylelint-config-hudochenkov": "^5.0.0",
+    "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-recommended": "^4.0.0",
     "stylelint-config-styled-components": "^0.1.1",
     "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.2.0",
     "stylelint-processor-styled-components": "^1.10.0",
     "typescript": "^4.2.3"
   }
